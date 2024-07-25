@@ -48,44 +48,46 @@ const Notes = () => {
       <Helmet>
         <title>Notes</title>
       </Helmet>
-      <div className=" container px-5 grid grid-cols-4 gap-5 mt-5">
-        {notes?.slice(0, next).map((note) => (
-          <div
-            className=" border border-green-700 px-5 py-3 rounded"
-            key={note.id}
-          >
-            <h2>{note.title}</h2>
-            <p>{note.description}</p>
-            <span className=" text-sm text-slate-500 font-mono">
-              {formatDistance(note.createAt, new Date(), { addSuffix: true })}
-            </span>
-            <div className=" flex justify-end gap-3">
-              <button
-                onClick={() => handleDelete(note.id)}
-                className=" px-4 py-1 text-base text-white font-medium rounded bg-red-500"
-              >
-                delete
-              </button>
-              <button
-                onClick={() => handleUpdate(note)}
-                className=" px-4 py-1 text-base text-white font-medium rounded bg-black"
-              >
-                update
-              </button>
+      <div className="mx-auto max-w-7xl pt-8">
+        <div className=" px-5 grid grid-cols-4 gap-5 mt-5">
+          {notes?.slice(0, next).map((note) => (
+            <div
+              className=" border-2 border-green-700 px-5 py-3 rounded-lg shadow-md"
+              key={note.id}
+            >
+              <h2>{note.title}</h2>
+              <p>{note.description}</p>
+              <span className=" text-sm text-slate-500 font-mono">
+                {formatDistance(note.createAt, new Date(), { addSuffix: true })}
+              </span>
+              <div className=" flex justify-end gap-3">
+                <button
+                  onClick={() => handleDelete(note.id)}
+                  className=" px-4 py-1 text-base text-white font-medium rounded-md bg-[#ff0e0e] text-center"
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={() => handleUpdate(note)}
+                  className=" px-4 py-1 text-base text-white font-medium rounded-md bg-black text-center"
+                >
+                  Update
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      {notes.length > next && (
-        <div className=" text-center mt-4">
-          <button
-            onClick={handleLoadMore}
-            className=" text-center px-4 py-1 font-medium text-base text-white bg-blue-500 rounded"
-          >
-            see more
-          </button>
+          ))}
         </div>
-      )}
+        {notes.length > next && (
+          <div className=" text-center mt-4">
+            <button
+              onClick={handleLoadMore}
+              className=" text-center px-4 py-1 font-medium text-base text-white bg-blue-500 rounded"
+            >
+              see more
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 };

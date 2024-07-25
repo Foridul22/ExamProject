@@ -11,7 +11,7 @@ const Navbar = () => {
               Logo
             </Link>
           </div>
-          <div className=" flex items-center gap-4">
+          <div className=" flex items-center gap-10">
             <Link to="/" className=" font-serif text-xl font-semibold">
               Home
             </Link>

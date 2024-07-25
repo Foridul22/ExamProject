@@ -24,7 +24,7 @@ const Home = () => {
       dispatch(addToNote(newNotes));
       toast.success("Successfully added!", {
         position: "top-right",
-        autoClose: 1000,
+        autoClose: 800,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
@@ -35,7 +35,7 @@ const Home = () => {
     } else {
       toast.error("Please fill up empty field!", {
         position: "top-right",
-        autoClose: 1000,
+        autoClose: 800,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: false,
@@ -54,7 +54,7 @@ const Home = () => {
         <title>Home</title>
       </Helmet>
       <ToastContainer />
-      <div className=" flex justify-center items-center box-border">
+      <div className=" flex justify-center items-center">
         <div className=" bg-slate-200 mt-20 w-[450px] px-5 py-3 rounded">
           <h2 className=" text-center text-4xl font-serif font-semibold mb-3">
             Add to Notes
@@ -77,7 +77,7 @@ const Home = () => {
             ></textarea>
             <button
               onClick={handleSaveNotes}
-              className=" bg-black text-base text-white font-serif font-semibold capitalize px-5 py-2 rounded"
+              className=" bg-slate-600 hover:bg-black text-lg text-white font-serif font-bold capitalize px-5 py-2 rounded"
             >
               save notes
             </button>
