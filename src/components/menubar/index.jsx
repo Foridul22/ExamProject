@@ -3,29 +3,25 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className=" bg-black flex justify-between items-center px-8 py-3">
-        <div>
-          <Link to="/" className=" text-white font-mono text-xl font-semibold">
-            Logo
-          </Link>
-        </div>
-        <div className=" flex items-center gap-4">
-          <Link to="/" className=" text-white font-mono text-xl font-semibold">
-            Home
-          </Link>
-          <Link
-            to="/notes"
-            className=" text-white font-mono text-xl font-semibold"
-          >
-            Notes
-          </Link>
-          <Link
-            to="/contact"
-            className=" text-white font-mono text-xl font-semibold"
-          >
-            Contact
-          </Link>
+    <div className="bg-blue-400 text-black">
+      <div className="mx-auto max-w-7xl">
+        <div className="  flex justify-between items-center px-8 py-3">
+          <div>
+            <Link to="/" className="  font-serif text-2xl font-bold">
+              Logo
+            </Link>
+          </div>
+          <div className=" flex items-center gap-4">
+            <Link to="/" className=" font-serif text-xl font-semibold">
+              Home
+            </Link>
+            <Link to="/notes" className=" font-serif text-xl font-semibold">
+              Notes
+            </Link>
+            <Link to="/contact" className=" font-serif text-xl font-semibold">
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </div>
